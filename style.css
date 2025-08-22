@@ -1,0 +1,116 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border: 3px solid red; /* Outline for Box Model visualization */
+}
+
+/* Navigation with Flexbox */
+nav {
+  background: #34495e;
+  border: 3px solid orange; /* Outline */
+}
+.nav-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.nav-links li {
+  margin: 10px;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+}
+.nav-links a:hover {
+  background: #2ecc71;
+  border-radius: 5px;
+}
+
+/* Main layout with CSS Grid */
+.grid-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Main content + Sidebar */
+  gap: 20px;
+  padding: 20px;
+  border: 3px solid blue; /* Outline */
+}
+
+/* Content */
+.content {
+  background: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  border: 2px dashed green; /* Outline */
+}
+
+/* Sidebar */
+.sidebar {
+  background: #bdc3c7;
+  padding: 15px;
+  border-radius: 5px;
+  border: 2px dashed purple; /* Outline */
+}
+
+/* Flexbox Cards */
+.card-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  border: 2px dashed brown; /* Outline */
+}
+.card {
+  background: #3498db;
+  color: white;
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+  border: 2px solid black; /* Outline */
+}
+
+/* Footer */
+footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+  border: 3px solid pink; /* Outline */
+}
+
+/* Responsive Design (media queries) */
+
+/* Tablets */
+@media (max-width: 900px) {
+  .grid-layout {
+    grid-template-columns: 1fr; /* Stack content & sidebar */
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .nav-links {
+    flex-direction: column; /* Stack navigation links */
+    align-items: center;
+  }
+
+  .card-container {
+    flex-direction: column; /* Stack cards */
+  }
+}
